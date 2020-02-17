@@ -1,21 +1,8 @@
 from flask import Flask, render_template, jsonify, request
 
-# def create_app():
-#     '''Create and configure an instance of the Flask application.'''
-#     app = Flask(__name__)
-#
-#     @app.route('/')
-#     def root():
-#         return render_template('home.html')
-#
-#     return app
-#
-# if __name__ == '__main__':
-#     create_app()
-
 app = Flask(__name__)
 
-# Webpage that says 'Hello World!'
+# Homepage
 @app.route('/')
 def root():
     return render_template('home.html')
