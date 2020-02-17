@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 
 # def create_app():
 #     '''Create and configure an instance of the Flask application.'''
@@ -40,6 +40,13 @@ def users():
         {'id':3, 'name': 'Third User'},
     ]
     return jsonify(users)
+
+@app.route('/users/create', methods=['POST'])
+def create_user():
+    print('CREATING A NEW USER...')
+    print('FORM DATA:', dict(request.form))
+    # todo: create a new user
+    return jsonify({'message': 'CREATED OKAY (TODO)'})
 
 if __name__ == '__main__':
     app.run()
