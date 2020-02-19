@@ -43,18 +43,12 @@ def check_score(score):
 @app.route('/users')
 @app.route('/users.json')
 def users():
-    # users = [
-    #     {'id':1, 'name': 'First User'},
-    #     {'id':2, 'name': 'Second User'},
-    #     {'id':3, 'name': 'Third User'},
-    # ]
-    # return jsonify(users)
-
     users = User.query.all()  # Returns a list of <class 'app.User'>
     print(type(users))
     print(type(users[0]))
     print(len(users))
 
+    # Create simplified dict for users
     users_response = []
     for u in users:
         user_dict = u.__dict__
@@ -62,12 +56,11 @@ def users():
         users_response.append(user_dict)
     return jsonify(users_response)
 
+# Create new users
 @app.route('/users/create', methods=['POST'])
 def create_user():
     print('CREATING A NEW USER...')
     print('FORM DATA:', dict(request.form))
-    # todo: create a new user
-    # return jsonify({'message': 'CREATED OKAY (TODO)'})
     if 'name' in request.form:
         name = request.form['name']
         print(name)
