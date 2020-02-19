@@ -1,5 +1,6 @@
-import basilica, os
+import os
 from dotenv import load_dotenv
+import basilica
 
 load_dotenv()
 
