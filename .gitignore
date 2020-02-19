@@ -1,4 +1,8 @@
+# Environment variables
 .env
+
+# Databases
+twitoff/app.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -129,6 +133,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# Databases
-twitoff/app.db

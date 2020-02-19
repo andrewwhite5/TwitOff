@@ -13,5 +13,11 @@ sentences = [
 
 with basilica.Connection(basilica_api_key) as c:
     embeddings = c.embed_sentences(sentences)
+    print(list(embeddings))
 
-print(list(embeddings))
+for emb in embeddings:
+    print(type(emb))
+    print(emb)
+    print('-----------------')
+
+connection.close()
