@@ -5,7 +5,7 @@ A web application for comparing Twitter users
 
 cd twitoff
 
-FLASK_APP=app.py flask db init #> Generates app/migrations dir
+FLASK_APP=app.py flask db init  #> Generates app/migrations dir
 
 '''
 
@@ -15,9 +15,9 @@ FLASK_APP=app.py flask db init #> Generates app/migrations dir
 
 '''sh
 
-FLASK_APP=app.py flask db migrate #> Creates the db (with 'alembic_version' table)
+FLASK_APP=app.py flask db migrate  #> Creates the db (with 'alembic_version' table)
 
-FLASK_APP=app.py flask db upgrade #> Creates the 'users' table
+FLASK_APP=app.py flask db upgrade  #> Creates the 'users' table
 
 '''
 
