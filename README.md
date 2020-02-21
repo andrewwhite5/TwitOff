@@ -6,7 +6,7 @@ cd twitoff
 
 FLASK_APP=app.py flask db init #> Generates app/migrations dir
 
-## Run both when changing the schema
+#> Run both when changing the schema
 FLASK_APP=app.py flask db migrate #> Creates the db (with 'alembic_version' table)
 FLASK_APP=app.py flask db upgrade #> Creates the 'users' table
 '''
